@@ -22,8 +22,8 @@
 
 Тестові скріншоти
 ------
-**Скріни лежать в каталозі [test_screenshots](https://github.com/orlovmax/uawebchallenge/test_screenshots/)**
+**Скріни лежать в каталозі [test_screenshots](https://github.com/orlovmax/uawebchallenge/tree/master/test_screenshots/)**
 
-- Тест відпоідності макету [almost_pixel-perfect](https://github.com/orlovmax/uawebchallenge/test_screenshots/almost_pixel-perfect/)
-- Тест сумісності браузерів, окрім експлореру, з нього скріни не отримав, але там все норм. [browser_compat](https://github.com/orlovmax/uawebchallenge/test_screenshots/browser_compat/)
-- Тест адаптивності [responsive](https://github.com/orlovmax/uawebchallenge/test_screenshots/responsive/)
+- Тест відпоідності макету [almost_pixel-perfect](https://github.com/orlovmax/uawebchallenge/tree/master/test_screenshots/almost_pixel-perfect/)
+- Тест сумісності браузерів, окрім експлореру, з нього скріни не отримав, але там все норм. [browser_compat](https://github.com/orlovmax/uawebchallenge/tree/master/test_screenshots/browser_compat/)
+- Тест адаптивності [responsive](https://github.com/orlovmax/uawebchallenge/tree/master/test_screenshots/responsive/)

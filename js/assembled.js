@@ -371,4 +371,4 @@ $('.js-slider').each(function () {
 
 })(jQuery, window, document);
 
-$(".js-lazy").lazyload({ effect : "fadeIn", threshold : 500 });
+$(".js-lazy").lazyload({ effect : "fadeIn", threshold : 300 });
