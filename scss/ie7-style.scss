@@ -1,0 +1,187 @@
+/* ==============================
+   $Contents
+   ==============================*/
+/**
+* Contents......................Here we are!
+* Custom mixins and vars........Project's custom mixins and variables
+* 
+* Headings and text.............Headings and paragraphs general styles
+* General styles................Abstract styles
+*  Main header..................Title,langs, mail styles
+*   Top elements................Nav, event styles
+*  Biography section............Portrait, description styles
+*  Design section...............Sliders, annotation, featured work styles
+*  Media section................Projects, books, description styles
+*  Partners section.............Logos, description styles
+*  Contacts section.............Contacts, location styles
+*  Media queries................Media queries section
+*   Media max-width: 980px
+*   Media max-width: 800px
+*/
+
+
+/* ==============================
+   $Custom mixins and vars
+   ============================== */  
+$main-color: #2f2f2f;   
+@mixin inline-block-fix{
+	*display: inline;
+	zoom: 1;	
+}   
+
+
+/* ==============================
+   $General styles
+   ==============================*/ 
+html{
+	overflow-x: hidden;
+}
+	body {	
+		padding:40px 0;
+	}
+
+	
+/* ==============================
+   $Main header
+   ==============================*/ 	
+		.header__link{
+			@include inline-block-fix;
+		}	
+		
+		
+/* ==============================
+   $Top elements
+   ==============================*/ 	
+	.event{
+		float: left;
+		width: 30%;
+		padding: 0 5%;	
+		& img{
+			@include inline-block-fix;
+		}
+	}
+		.event__date{	
+			@include inline-block-fix;
+		}
+		
+	.nav{
+		&.is-fixed{
+			border-bottom: 3px solid $main-color;
+			& li{
+				@include inline-block-fix;
+			}
+		}
+	}	
+	
+	
+/* ==============================
+   $Biography section
+   ==============================*/	
+	.bio{
+		width: 60%;
+	}
+   
+   
+/* ==============================
+   $Design section
+   ==============================*/		
+			.design__title{
+				padding-left: 0;
+			}
+			.design__slider{
+				@include inline-block-fix;
+			}	
+				.slider__title{
+					@include inline-block-fix;
+				}
+				
+				.slider__controls{
+					padding-top: 10px;
+					line-height: 0;
+				}
+					.slider__arrow{
+						@include inline-block-fix;
+					}
+		
+			.featured__title{
+				margin-bottom: 20px;
+			}
+				.logo__inner	{			
+					width: 156px;
+					height: 145px;	
+				}
+	
+	
+/* ==============================
+   $Media section
+   ==============================*/		
+			.media__title{
+				padding-left: 0;
+			}		
+			.book__item{		
+				@include inline-block-fix;	
+				margin-right: 25px;	
+			}		
+	
+	
+/* ==============================
+   $Partners section
+   ==============================*/			
+		.partners__title{
+			padding-right: 0;
+		}
+		.partners__wrap{
+			padding: 28px 0 0;
+		}
+			.partners__item{
+				@include inline-block-fix;
+				& a{
+					@include inline-block-fix;
+				}	
+			}
+	
+	
+/* ==============================
+   $Contacts section
+   ==============================*/				
+			.contact__card{
+				@include inline-block-fix;
+			}
+					
+					
+/* ==============================
+   $Media queries
+	* max-width: 980px
+	* max-width: 800px
+   ============================== */   
+
+
+/* ==============================
+   $Media max-width 980px
+   ==============================*/
+@media screen and (max-width:980px){
+			
+	.nav{		
+		& li{
+			@include inline-block-fix;
+		}		
+	}	
+
+/* media mw_980px media */	
+	
+			.doc__item{
+				@include inline-block-fix;
+			}				
+}
+
+
+/* ==============================
+   $Media max-width 800px
+   ==============================*/
+@media screen and (max-width:800px){
+
+/* media mw_800px general */
+body{
+	padding: 0;
+}	
+}

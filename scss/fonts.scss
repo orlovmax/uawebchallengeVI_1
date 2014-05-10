@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'AcademyC';
+    src: url('../fonts/academyc.eot');
+    src: url('../fonts/academyc.eot') format('embedded-opentype'),
+         url('../fonts/academyc.woff') format('woff'),
+         url('../fonts/academyc.ttf') format('truetype'),
+         url('../fonts/academyc.svg#AcademyCRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'AcademyCBold';
+    src: url('../fonts/academyc-bold.eot');
+    src: url('../fonts/academyc-bold.eot') format('embedded-opentype'),
+         url('../fonts/academyc-bold.woff') format('woff'),
+         url('../fonts/academyc-bold.ttf') format('truetype'),
+         url('../fonts/academyc-bold.svg#AcademyCBoldCyrillic') format('svg');
+}
+
+@font-face {
+    font-family: 'AcademyCItalic';
+    src: url('../fonts/academyc-italic.eot');
+    src: url('../fonts/academyc-italic.eot') format('embedded-opentype'),
+         url('../fonts/academyc-italic.woff') format('woff'),
+         url('../fonts/academyc-italic.ttf') format('truetype'),
+         url('../fonts/academyc-italic.svg#AcademyCItalicCyrillic') format('svg');
+}
