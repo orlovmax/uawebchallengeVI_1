@@ -47,10 +47,11 @@ $(document).ready(function(){
         var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
         var windowHeight = $(window).height(); // get the height of the window
         var docHeight = $(document).height();
+		var navHeight = $(".js-nav.is-fixed").height();
  
         for (var i=0; i < aArray.length; i++) {
             var theID = aArray[i];
-            var sectPos = $(theID).offset().top - 50; // get the offset of the div from the top of page
+            var sectPos = $(theID).offset().top - navHeight; // get the offset of the div from the top of page + except nav height
             var sectHeight = $(theID).height(); // get the height of the div in question
             if (windowPos >= sectPos && windowPos < (sectPos + sectHeight)) {
                 $(".js-link[href='" + theID + "']").addClass("is-active");
@@ -68,7 +69,7 @@ $(document).ready(function(){
         }
 		
 		//highlight first nav item when first section has some top offset
-		 if(($(".js-nav").find("li:first-child").find(".js-link").offset().top) < 200) {
+		 if(windowPos < $("#biography").offset().top) {
             if (!$(".js-nav").find("li:first-child").find(".js-link").hasClass("is-active")) {
                 var navActiveCurrent = $(".is-active").attr("href");
                 $(".js-link[href='" + navActiveCurrent + "']").removeClass("is-active");
