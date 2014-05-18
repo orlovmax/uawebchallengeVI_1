@@ -1,58 +1,58 @@
 /* 
  * navigation script: sticky nav, anchor smooth scrolling, selecting current nav item 
 */
-$(document).ready(function(){ 
-    
+$(function () {
+	'use strict';
     //Sticky navbar. We take offset top of navbar and compare with top scroll, in result - add or remove .is-fixed class
-    var NavTopOffset = $('.js-nav').offset().top; 
-    $(window).scroll(function(){	  
-		var topScroll = $(window).scrollTop();  
-       
-		if (topScroll > NavTopOffset) {   
-			$('.js-nav').addClass('is-fixed');  
-		} else {  
-			$('.js-nav').removeClass('is-fixed');   
-		} 
-    });
- 
-    
-    //Smooth anchor scroll, targeted to our nav links with .js-link class... Actually this thing was modified on csstricks    
-	var anchor = $(".js-link");
-	anchor.click(function() {
-		
-		if (location.pathname.replace(/^\//,"") == this.pathname.replace(/^\//,"") && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $("[name=" + this.hash.slice(1) +"]");
-		if (target.length) {
-			$("html,body").animate({
-				scrollTop: target.offset().top
-			}, 1000);
-			return false;
+    var NavTopOffset = $('.js-nav').offset().top,
+		anchor = $(".js-link"),
+		navLinks = $(".js-link"),
+		aArray = [],
+		i;
+    $(window).scroll(function () {
+		var topScroll = $(window).scrollTop();
+
+		if (topScroll > NavTopOffset) {
+			$('.js-nav').addClass('is-fixed');
+		} else {
+			$('.js-nav').removeClass('is-fixed');
 		}
+    });
+
+    //Smooth anchor scroll, targeted to our nav links with .js-link class... Actually this thing was modified on csstricks
+	anchor.click(function () {
+
+		if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+			if (target.length) {
+				$("html,body").animate({
+					scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
 		}
 	});
- 
+
 	//Highlight nav list item when current section visible
 	//Originally this way is belong to http://www.callmenick.com
-    var navLinks = $(".js-link"); // find the a children of the list items
-    var aArray = []; // create the empty aArray
-    for (var i=0; i < navLinks.length; i++) {    
-        var link = navLinks[i];
-        var ahref = $(link).attr('href');
+    for (i = 0; i < navLinks.length; i += 1) {
+        var link = navLinks[i],
+			ahref = $(link).attr('href');
         aArray.push(ahref);
-		console.log();
     } // this for loop fills the aArray with attribute href values
- 
-    $(window).scroll(function(){
-        var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
-        var windowHeight = $(window).height(); // get the height of the window
-        var docHeight = $(document).height();
-		var navHeight = $(".js-nav.is-fixed").height();
- 
-        for (var i=0; i < aArray.length; i++) {
-            var theID = aArray[i];
-            var sectPos = $(theID).offset().top - navHeight; // get the offset of the div from the top of page + except nav height
-            var sectHeight = $(theID).height(); // get the height of the div in question
+
+    $(window).scroll(function () {
+        var windowPos = $(window).scrollTop(), // get the offset of the window from the top of page
+			windowHeight = $(window).height(), // get the height of the window
+			docHeight = $(document).height(),
+			navHeight = $(".js-nav.is-fixed").height(),
+            navActiveCurrent = $(".is-active").attr("href");
+
+        for (i = 0; i < aArray.length; i += 1) {
+            var theID = aArray[i],
+				sectPos = $(theID).offset().top - navHeight, // get the offset of the div from the top of page + except nav height
+				sectHeight = $(theID).height(); // get the height of the div in question
             if (windowPos >= sectPos && windowPos < (sectPos + sectHeight)) {
                 $(".js-link[href='" + theID + "']").addClass("is-active");
             } else {
@@ -60,18 +60,16 @@ $(document).ready(function(){
             }
         }
 		//highlight last nav list item on last section
-        if(windowPos + windowHeight == docHeight) {
+        if (windowPos + windowHeight === docHeight) {
             if (!$(".js-nav").find("li:last-child").find(".js-link").hasClass("is-active")) {
-                var navActiveCurrent = $(".is-active").attr("href");
                 $(".js-link[href='" + navActiveCurrent + "']").removeClass("is-active");
                 $(".js-nav").find("li:last-child").find(".js-link").addClass("is-active");
             }
         }
-		
+
 		//highlight first nav item when first section has some top offset
-		 if(windowPos < $("#biography").offset().top) {
+		if (windowPos < $("#biography").offset().top) {
             if (!$(".js-nav").find("li:first-child").find(".js-link").hasClass("is-active")) {
-                var navActiveCurrent = $(".is-active").attr("href");
                 $(".js-link[href='" + navActiveCurrent + "']").removeClass("is-active");
                 $(".js-nav").find("li:first-child").find(".js-link").addClass("is-active");
             }
@@ -84,15 +82,16 @@ $(document).ready(function(){
  *Simple slider with counter. We need more sliders! For each slider on the page we count total slides, current slide and animate them
 */
 $('.js-slider').each(function () {
-	var $this = $(this);
-	var slide = $this.find('.js-slide');
-	var next = $this.find('.js-next');
-	var prev = $this.find('.js-prev');
-    var count = slide.length;
-	
+	'use strict';
+	var $this = $(this),
+		slide = $this.find('.js-slide'),
+		next = $this.find('.js-next'),
+		prev = $this.find('.js-prev'),
+		count = slide.length;
+
 	// display number of slides in slider meta
     $this.find(".js-total").text(count);
-	
+
     // set display:none for all members of .js-slide class except the first
     $this.find('.js-slide:gt(0)').hide();
 
@@ -105,14 +104,12 @@ $('.js-slider').each(function () {
             $this.find(".js-current").text("1");
             current.hide();
             slide.first().show();
-        }
-        // else, hide current slide and show the next one
-        else {
-            $this.find(".js-current").text(current.next().index()+1);
+        } else { // else, hide current slide and show the next one
+            $this.find(".js-current").text(current.next().index() + 1);
             current.hide().next().show();
         }
     });
-	
+
 	//for "prev" button we'll hide current slide and show previous	
 	prev.click(function (ev) {
 		ev.preventDefault();
@@ -122,14 +119,13 @@ $('.js-slider').each(function () {
             $this.find(".js-current").text(count);
             current.hide();
             slide.last().show();
-        }
-        // else, hide current slide and show the previous
-        else {
-            $this.find(".js-current").text(current.prev().index()+1);
+        } else { // else, hide current slide and show the previous
+            $this.find(".js-current").text(current.prev().index() + 1);
             current.hide().prev().show();
         }
     });
-}); 
+});
+
 
 
 /**
@@ -146,7 +142,7 @@ $('.js-slider').each(function () {
  * Version:  1.9.0
  *
  */
- 
+ // Damn it! tis part isn't "linted"
 (function($, window, document, undefined) {
     var $window = $(window);
 
