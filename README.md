@@ -27,3 +27,7 @@
 - Тест відпоідності макету [almost_pixel-perfect](https://github.com/orlovmax/uawebchallenge/tree/master/test_screenshots/almost_pixel-perfect/)
 - Тест сумісності браузерів, окрім експлореру, з нього скріни не отримав, але там все норм. [browser_compat](https://github.com/orlovmax/uawebchallenge/tree/master/test_screenshots/browser_compat/)
 - Тест адаптивності [responsive](https://github.com/orlovmax/uawebchallenge/tree/master/test_screenshots/responsive/)
+
+---
+
+![uaweb-semifinal template](test_screenshots/responsive/uaweb_firefox-29.1_gt1400px.jpg)
