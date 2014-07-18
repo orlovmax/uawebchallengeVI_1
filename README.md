@@ -30,4 +30,4 @@
 
 ---
 
-![uaweb-semifinal template](test_screenshots/responsive/uaweb_firefox-29.1_gt1400px.jpg)
+![uaweb template](test_screenshots/responsive/uaweb_firefox-29.1_gt1400px.jpg)
