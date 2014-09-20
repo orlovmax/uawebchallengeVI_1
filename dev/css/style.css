@@ -27,56 +27,37 @@
 /* ==============================
    $Reset
    ==============================*/
-/* Modified reset css, original by http://meyerweb.com/eric/tools/css/reset/  */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, input, label, legend,
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, cite, code, em, img, q, ol, ul, li, fieldset, form, input, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+article, aside, figure, figcaption, footer, header, nav, section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   font-weight: normal;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
 }
 
 body {
   line-height: 1;
 }
 
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, nav, section {
+  display: block;
 }
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+ol, ul {
+  list-style: none;
 }
 
 button, input[type=submit] {
@@ -104,36 +85,9 @@ button, input[type=submit] {
 /* ==============================
    $Elements lib
    ==============================*/
-/* =========================================================
-   orlovmax.com scss elements library v1.1
-   ===================================
-   More info at https://github.com/orlovmax/sass-scss-elements
-   ========================================================= */
 /* ==============================
    $Layout tools
    ==============================*/
-/* =========================================================
-   Pretty weird less mixins library but useful in css coding
-   More at https://github.com/orlovmax/layout-tools-scss
-   ========================================================= */
-/**
-* First mixin called regular-graph-paper, it creates lines similar to regular graphing paper using linear gradients above your markup, so you can see sizes of elements and margins between them.
-* There are next options: grid opacity, cell width, cell height, line color, background attachment,so you can set width and height of grid cells and line color or make grid fixed or scrollable.
-*
-*
-* Second mixin caled layout. It allows you to locate *.jpeg or *.png layout with some opacity above your markup for next css styling. 
-* Also this mixin optionally includes previous mixin - regular graphing paper.
-* There are bunch of options as layout url(by default it sets to "../img/layout.jpg", so it seems that your layout in img folder that on the same level as css folder with current style), layout width(100% by default, you should set to width of layout picture), layout opacity(by default sets to 0.5) and graphing paper grid options - grid opacity( 0 as default option), cell width(10px by default), cell height(10px by default), line color(#fff by default).
-* As you can see in this mixin grid is disabled by default, but you can turn it on by setting grid opacity to 0.5 for example
-* Also you can adjust cell sizes and line color as you need.
-*
-* I recomend you to mix up these mixins to html or body tag, and it'll create pseudo elements with desirable content.
-*
-*
-* Please notice that z-index of grid and layout sets to 999, so you're unable to test your links by clicking them. 
-*/
-/*regular-graph-paper mixin*/
-/* layout mixin*/
 /* ==============================
    $Custom mixins and vars
    ============================== */

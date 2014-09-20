@@ -12,7 +12,6 @@ module.exports = function(grunt) {
         uglify: {
             main: {
                 files: {
-                    // Результат задачи concat
                     'js/assembled.min.js': '<%= concat.main.dest %>'
                 }
             }
@@ -57,12 +56,12 @@ module.exports = function(grunt) {
         //   }
         // },
 
-        htmlmin: {                                     // Task
-            dist: {                                      // Target
-              options: {                                 // Target options
+        htmlmin: {  
+            dist: {     
+              options: {             
                 collapseWhitespace: true
               },
-              files: {                                   // Dictionary of files
+              files: { 
                 'index.html': 'dev/index.html'
               }
             }
@@ -89,6 +88,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-newer');
 
-    // Задача по умолчанию
     grunt.registerTask('default', ['newer:htmlmin', 'newer:sass', 'newer:cssmin','newer:concat', 'newer:uglify', 'watch']);
 };

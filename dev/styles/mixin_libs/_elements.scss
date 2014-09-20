@@ -1,9 +1,3 @@
-/* =========================================================
-   orlovmax.com scss elements library v1.1
-   ===================================
-   More info at https://github.com/orlovmax/sass-scss-elements
-   ========================================================= */
-     
 @mixin testbg($red: 255, $green: 0, $blue: 0, $alpha: .3){ 
 	background-color: rgba($red, $green, $blue, $alpha);
 }
