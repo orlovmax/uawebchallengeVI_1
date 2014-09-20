@@ -1,0 +1,27 @@
+{
+  "name": "uaweb",
+  "version": "1.0.0",
+  "description": "UaWebChallenge",
+  "author": "Maxim Orlov <mail@orlovmax.com>",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orlovmax/uawebchallenge"
+  },
+  "bugs": {
+    "url": "https://github.com/orlovmax/uawebchallenge/issues"
+  },
+  "homepage": "http://orlovmax.github.io/uawebchallenge",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-combine-media-queries": "^1.0.19",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^0.7.0"
+  },
+  "license": "MIT"
+}
