@@ -40,43 +40,43 @@ UPD: Робота не в оригінальному вигляді, так як
 ├── README.md
 |
 ├── _grunt/                                    * grunt build system
-|	├── grunt_tasks/                           * grunt tasks
-|	|   ├── config/                            * grunt tasks config
-|	│   |	├── paths.js
-|	│   |	├── settings.js
-|	│   |	└── aliases.js
-|	│   |
-|	|   └── task.js
-|	│
-|	├── Gruntfile.js
-|	└── package.json
+|   ├── grunt_tasks/                           * grunt tasks
+|   |   ├── config/                            * grunt tasks config
+|   │   |   ├── paths.js
+|   │   |   ├── settings.js
+|   │   |   └── aliases.js
+|   │   |
+|   |   └── task.js
+|   │
+|   ├── Gruntfile.js
+|   └── package.json
 |
 ├── screenshots/                               * responsive test screenshots
 |
 ├── dev/                                       * site source
 │   ├── images/                                * image sources
-|	│
+|   │
 │   ├── pug/                                   * templates
-|	│
+|   │
 │   ├── js/                                    * source js
-|	│
-|	├── sass/                                  * sass preprocessor styles
-|	│
+|   │
+|   ├── sass/                                  * sass preprocessor styles
+|   │
 │   ├── helpers/                               * helper files
-|	│
+|   │
 │   └── fonts/                                 * font sources
 │
 └── build/                                     * built source
-	├── index.html
-	|
-	└── static/                                * static assets
-		├── css/                               * minified styles
-		|
-		├── images/                            * minified images
-		│
-		├── js/                                * minified assembled js
-		|
-		└── fonts/                             * @font-face-ready webfonts
+    ├── index.html
+    |
+    └── static/                                * static assets
+        ├── css/                               * minified styles
+        |
+        ├── images/                            * minified images
+        │
+        ├── js/                                * minified assembled js
+        |
+        └── fonts/                             * @font-face-ready webfonts
 
 ```
 
