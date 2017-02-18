@@ -1,0 +1,289 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		title Архитектор Нана Эрнандес Геташвили
+		meta(name='description', content='Сайт архитектора Наны Георгиевны Эрнандес Геташвили')
+		meta(name='keywords', content='Нана Геташвили, архитекор, дизайнер, ахитектура, дизайн интерьеров, медиа')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		// Opengraph
+		meta(property='og:type', content='website')
+		meta(property='og:title', content='Архитектор Нана Эрнандес Геташвили')
+		meta(property='og:description', content='Сайт архитектора Наны Георгиевны Эрнандес Геташвили')
+		meta(property='og:image', content='https://github.com/orlovmax/uawebchallengeVI_1/tree/master/static/images/meta-picture.jpg')
+		meta(property='og:url', content='https://github.com/orlovmax/uawebchallengeVI_1')
+		// TwitterCard
+		meta(name='twitter:card', content='summary')
+		meta(name='twitter:title', content='Архитектор Нана Эрнандес Геташвили')
+		meta(name='twitter:description', content='Сайт архитектора Наны Георгиевны Эрнандес Геташвили')
+		meta(name='twitter:image:src', content='https://github.com/orlovmax/uawebchallengeVI_1/tree/master/static/images/meta-picture.jpg')
+		meta(name='twitter:creator', content='@orlovmax_im')
+		meta(name='twitter:site', content='@orlovmax_im')
+		meta(name='twitter:url', content='https://github.com/orlovmax/uawebchallengeVI_1')
+		// favicons
+		link(rel='shortcut icon', href='favicon.ico')
+		link(rel='shortcut icon', href='static/images/icons/favicon.png', type='image/x-icon')
+		link(rel='apple-touch-icon-precomposed', sizes='144x144', href='static/images/icons/apple-touch-icon-144x144-precomposed.png')
+		link(rel='apple-touch-icon-precomposed', sizes='114x114', href='static/images/icons/apple-touch-icon-114x114-precomposed.png')
+		link(rel='apple-touch-icon-precomposed', sizes='72x72', href='static/images/icons/apple-touch-icon-72x72-precomposed.png')
+		link(rel='apple-touch-icon-precomposed', href='static/images/icons/apple-touch-icon-precomposed.png')
+
+		link(rel='stylesheet', href='static/css/style.min.css')
+		<!--[if lt IE 8]><link rel="stylesheet" href="static/css/ie7-style.min.css"><![endif]-->
+
+		<!--[if IE]><script src="static/js/ie.min.js"></script><![endif]-->
+
+	body
+		// Page wrap - outer container with border
+		.page-wrap
+			// Page - inner container with border
+			.page
+				// Main page header
+				header.page__header
+					a.header__link.lang(href='#') English ver.
+					a.header__link.mail(href='mailto:Hello@ngcinema.ru') Hello@ngcinema.ru
+					h1.header__title Nana Hernandez Getashvili
+				// End Main page header
+
+				// Main page navbar
+				nav.nav.js-nav
+					ul
+						li
+							a.nav__link.js-link.js-anchor.is-active(href='#biography') Биография
+						li
+							a.nav__link.js-link.js-anchor(href='#design') Архитектура и дизайн
+						li
+							a.nav__link.js-link.js-anchor(href='#media') Медиа проекты
+						li
+							a.nav__link.js-link.js-anchor(href='#partners') Партнёры
+						li
+							a.nav__link.js-link.js-anchor(href='#contacts') Контакты
+				// End Main page navbar
+
+				// Standalone event block
+				article.event
+					img(src='static/images/event.jpg', alt='Ближайшее событие')
+					.event__date
+						| 28-30
+						span.event__month Июня
+						span.event__cat Ближайшее событие
+					h3.event__title
+						a(href='#', title='Перейти к новости') Женский форум АТЭС
+					p.event__text
+						| С 28 по30 июня 2012 года в Санкт-Петербурге состоится женский форум, в котором примет участие Нана Эрнандес Геташвили...
+				// End Standalone event block
+
+				// Biography section
+				section#biography.bio
+					.portrait
+						img(src='static/images/portrait.jpg', alt='Нана Эрнандес Геташвили')
+					.bio__descr
+						h1.bio__title Биография
+						p.bio__text
+							| Нана Георгиевна Эрнандес Геташвили -  президент группы компаний NGgalaxy, российский архитектор, дизайнер интерьеров, историк мирового зодчества. Член Союза художников и Союза архитекторов России, член Палаты Архитекторов федеральной земли Бремен (Германия), член Международной Ассоциации дизайнеров интерьеров (IIDA, США).
+				// End Biography section
+
+				// Design section with sliders
+				section#design.design
+					header.design__header
+						h1.design__title Архитектура и дизайн
+						p.design__descr
+							| Фотографии, которые вы здесь увидите, лишь небольшая часть воплощенных проектов, за 20 лет моей творческой деятельности.
+					.design__projects
+						.design__slider.js-slider
+							h3.slider__title
+								a(href='#', title='Перейти к разделу Виллы и замки') Виллы и замки
+							ul.slider__inner
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_1.jpg', src='static/images/loader.gif', alt='Виллы и замки проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_2.jpg', src='static/images/loader.gif', alt='Виллы и замки проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_3.jpg', src='static/images/loader.gif', alt='Виллы и замки проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_4.jpg', src='static/images/loader.gif', alt='Виллы и замки проекты')
+							.slider__controls
+								a.slider__arrow.slider__arrow_left.js-prev(href='#') Назад
+								span.js-current 1
+								|  /
+								span.js-total
+								a.slider__arrow.slider__arrow_right.js-next(href='#') Вперед
+						.design__slider.js-slider
+							h3.slider__title
+								a(href='#', title='Перейти к разделу Апартаменты') Апартаменты
+							ul.slider__inner
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_1.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_2.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_3.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_4.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_5.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_6.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_7.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_8.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_9.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_10.jpg', src='static/images/loader.gif', alt='Апартаменты проекты')
+							.slider__controls
+								a.slider__arrow.slider__arrow_left.js-prev(href='#') Назад
+								span.js-current 1
+								|  /
+								span.js-total
+								a.slider__arrow.slider__arrow_right.js-next(href='#') Вперед
+						.design__slider.js-slider
+							h3.slider__title
+								a(href='#', title='Перейти к разделу Апартаменты') Яхты
+							ul.slider__inner
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_1.jpg', src='static/images/loader.gif', alt='Яхты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_2.jpg', src='static/images/loader.gif', alt='Яхты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_3.jpg', src='static/images/loader.gif', alt='Яхты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_4.jpg', src='static/images/loader.gif', alt='Яхты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_5.jpg', src='static/images/loader.gif', alt='Яхты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_6.jpg', src='static/images/loader.gif', alt='Яхты проекты')
+								li.js-slide
+									img.js-lazy(data-src='static/images/arch/arch_7.jpg', src='static/images/loader.gif', alt='Яхты проекты')
+							.slider__controls
+								a.slider__arrow.slider__arrow_left.js-prev(href='#') Назад
+								span.js-current 1
+								|  /
+								span.js-total
+								a.slider__arrow.slider__arrow_right.js-next(href='#') Вперед
+					article.design__featured
+						h1.featured__title
+							a(href='#')
+								span Выставка Expo − 2008
+								span Испания
+						p.featured__text
+							| Нана Эрнандес Геташвили разрабатывала не только стенд России, но и сам символ российской экспозиции на Всемирной выставке ЭКСПО Сарагоса-2008.
+						.featured__logo
+							figure.logo__inner
+								img.js-lazy(data-src='static/images/logo.png', src='static/images/loader.gif', alt='Логотип NGgalaxy')
+								figcaption.logo__text Нана Эрнандес Геташвили
+				// End Design section
+
+				// Media section
+				section#media.media
+					header.media__header
+						h1.media__title Медиа проекты
+						p.media__descr
+							| Продюсерский центр NG Cinema был создан в 2007 году. Тогда же и увидел свет первый телевизионный проект продюсера
+							br
+							|  Наны Георгиевны Эрнандес Геташвили «Тайны мировой архитектуры», премьера которого состоялась на Российском телевидении, сейчас он продолжает транслироваться во многих странах мира
+					.media__doc
+						h2 Документальное кино
+						article.doc__item
+							img.js-lazy(data-src='static/images/media/media_1.jpg', src='static/images/loader.gif', alt='Тайны мировой архитектуры')
+							h3.media-item__title
+								a(href='#', title='') Тайны мировой архитектуры
+							p.media-item__descr
+								| В 2007 году вышел цикл документальных передач из 8 серий «Тайны мировой архитектуры» (производство кинокомпания «Мастерская»), где Нана Эрнандес Геташвили выступила в роли автора проекта...
+						article.doc__item
+							img.js-lazy(data-src='static/images/media/media_2.jpg', src='static/images/loader.gif', alt='Тайны любви')
+							h3.media-item__title
+								a(href='#', title='') Тайны любви
+							p.media-item__descr
+								| В 2009 году вышел фильм «Тайны любви» (производство кинокомпания «Мастерская» по заказу Первого канала. Продюсерами выступили Андрей Клишас, Нана Эрнандес Геташвили и Саида Медведева.
+						article.doc__item
+							img.js-lazy(data-src='static/images/media/media_3.jpg', src='static/images/loader.gif', alt='Тайны смерти')
+							h3.media-item__title
+								a(href='#', title='') Тайны смерти
+							p.media-item__descr
+								| Фильм «Тайны смерти» о том, почему мы должны так высоко ценить каждое мгновение жизни, и, главное, верить в Любовь.
+					.media__game
+						h2 Игровое кино
+						article.game__item
+							img.js-lazy(data-src='static/images/media/media_4.jpg', src='static/images/loader.gif', alt='Тайны смерти')
+							h3.media-item__title
+								a(href='#', title='') Какраки
+							p.media-item__descr
+								| Художественный фильм «Какраки», Россия 2009 год. Производство кинокомпания «Мастерская». Продюсеры: Андрей Клишас, Нана Геташвили, Саида Медведева (Кинокомпания «Ика фильм»).
+					.media__book
+						h2 Книга и альбом
+						article.book__item
+							img.js-lazy(data-src='static/images/media/book_hor.jpg', src='static/images/loader.gif', alt='Тайны смерти')
+							h3.media-item__title
+								a(href='#', title='') Тайны мировой архитектуры
+							p.media-item__descr
+								| В 2006 году вышло 1-е издание книги-альбома Наны Эрнандес Геташвили «Философия интерьера». Переиздана книга-альбом в 2011 году, переиздание приурочено к 20-летию творческой деятельности.
+						article.book__item
+							img.js-lazy(data-src='static/images/media/book_vert.jpg', src='static/images/loader.gif', alt='Тайны смерти')
+							h3.media-item__title
+								a(href='#', title='') Философия интерьера
+							p.media-item__descr
+								| В 2006 году вышло 1-е издание книги-альбома Наны Эрнандес Геташвили «Философия интерьера». Переиздана книга-альбом в 2011 году, переиздание приурочено к 20-летию творческой деятельности.
+				// End Media section
+
+				// Partner's logos section
+				section#partners.partners
+					header.partners__header
+						h1.partners__title Партнёры
+						p.partners__descr
+							| Партнерские отношения более чем с 500-ми производителями VIP сегмента в таких секторах рынка как: мебель, текстиль, предметы освещения, отделочные материалы, сантехника, аксессуары и предметы роскоши.
+					ul.partners__wrap
+						li.partners__item.partner-mash
+							a(href='#') Masheroni
+						li.partners__item.partner-buss
+							a(href='#') Bussandri
+						li.partners__item.partner-po
+							a(href='#') Pozzoli
+						li.partners__item.partner-che
+							a(href='#') Cheline
+						li.partners__item.partner-art
+							a(href='#') Arthur Brett
+						li.partners__item.partner-bal
+							a(href='#') Baldi
+						li.partners__item.partner-ce
+							a(href='#') CeccottiCollezioni
+				// End Partners section
+
+				// Contacts section with vcard widgets
+				section#contacts.contacts
+					header.contacts__header
+						h1.contacts__title Контакты
+					.contact__card.vcard
+						span.contact__org.fn.org NGgalaxy Москва
+						.contact__adr.adr
+							.contact__loc
+								span.locality Москва
+							span.postal-code 125047
+							span.street-address ул. Гашека, 2 строение 1
+						.tel
+							span.type Тел.:
+							|  +74992543990
+						.tel
+							span.type Факс:
+							|  +74992545591
+					.contact__card.vcard
+						span.contact__org.fn.org NGgalaxy Бремен
+						.adr
+							.contact__loc
+								span.locality Бремен
+								| ,
+								span.country-name Германия
+						.tel
+							span.type Тел.:
+							|  +49 (0) 421 330 2222 0
+						.tel
+							span.type Факс:
+							|  + 49 (0) 421 330 2222 2
+				// End Contacts section
+
+			// End Page
+
+		// End Page wrap
+
+		script(src='static/js/body.min.js')
