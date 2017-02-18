@@ -1,6 +1,6 @@
 # Робота відбіркового етапу UaWebChallengeVI - ARCHIVED
 
-###### Технології: Html5, Css3, JS, jQuery, Scss, reset.css, microformats.
+###### Технології: HTML5, CSS3, JS, jQuery, Pug, SCSS, microformats.
 ###### Сумісність: IE7+, Firefox29.0+, Chrome34.0+, Opera21.0+, Safari5.1+, Yandex.browser14.2+
 UPD: Робота не в оригінальному вигляді, так як в деяких місцях рефакторив код, пробуючи нові штуки
 
@@ -16,7 +16,7 @@ UPD: Робота не в оригінальному вигляді, так як
 
 ---
 
-![uaweb template](test_screenshots/responsive/uaweb_firefox-29.1_gt1400px.jpg)
+![uaweb template](screenshots/responsive/uaweb_firefox-29.1_gt1400px.jpg)
 
 ## Contents
 * [Folder structure](#folder-and-file-structure)
@@ -54,36 +54,20 @@ UPD: Робота не в оригінальному вигляді, так як
 ├── screenshots/                               * responsive test screenshots
 |
 ├── dev/                                       * site source
-|   ├── coffee/                                * coffee scripts
-|	│
 │   ├── images/                                * image sources
 |	│
+│   ├── pug/                                   * templates
+|	│
 │   ├── js/                                    * source js
-|	|   ├── vendor/                            * vendor scripts library
-|	|   ├── lib/                               * site scripts library
-|	│   ├── head.js                            * head scripts
-|	│   └── body.js                            * body scripts
 |	│
 |	├── sass/                                  * sass preprocessor styles
-|	|	├── blocks/                            * blocks library
-|	│   |   └── block.sass
-|	│   ├── helpers/                           * mixins and vars
-|	│   ├── vendor/                            * third-party code
-|	│   ├── custom.sass
-|	│   ├── noscript.sass
-|	│   └── screen.sass
 |	│
 │   ├── helpers/                               * helper files
-|	|	├── favicon.ico
-|	|	└── .htaccess
 |	│
-│   ├── fonts/                                 * font sources
-|	│
-│   └── data/                                  * configs and data for templates
+│   └── fonts/                                 * font sources
 │
 └── build/                                     * built source
 	├── index.html
-	├── page.html
 	|
 	└── static/                                * static assets
 		├── css/                               * minified styles
@@ -126,6 +110,7 @@ Grunt: `grunt dev`
 * Compile Sass stylesheets
 * Add vendor prefixes in css
 * Combine media queries in css files
+* Compile Pug templates
 * Sync helpers and other assets
 * Sync fonts
 * Sync images
@@ -152,6 +137,7 @@ Grunt: `grunt rebuild`
 * Compile Sass stylesheets
 * Add vendor prefixes in css
 * Combine media queries in css files
+* Compile Pug templates
 * Sync helpers and other assets
 * Sync fonts
 * Sync images
